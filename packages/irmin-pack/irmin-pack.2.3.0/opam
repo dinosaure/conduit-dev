@@ -1,0 +1,38 @@
+opam-version: "2.0"
+maintainer:   "thomas@gazagnaire.org"
+authors:      ["Thomas Gazagnaire"]
+license:      "ISC"
+homepage:     "https://github.com/mirage/irmin"
+bug-reports:  "https://github.com/mirage/irmin/issues"
+dev-repo:     "git+https://github.com/mirage/irmin.git"
+
+build: [
+ ["dune" "subst"] {pinned}
+ ["dune" "build" "-p" name "-j" jobs]
+ ["dune" "runtest" "-p" name] {with-test}
+]
+
+depends: [
+  "ocaml"      {>= "4.08.0"}
+  "dune"       {>= "2.5.1"}
+  "irmin"      {>= "2.3.0"}
+  "index"      {>= "1.2.1"}
+  "fmt"
+  "logs"
+  "lwt"
+  "mtime"
+  "irmin-test" {with-test & >= "2.3.0"}
+  "alcotest-lwt" {with-test}
+  "astring" {with-test}
+  "fpath" {with-test}
+]
+
+pin-depends: [
+  "index.dev" "git+https://github.com/mirage/index#b3b21b6ff21cd23974f8451b0c959f5b183f9d56"
+]
+
+synopsis: "Irmin backend which stores values in a pack file"
+
+url {
+  src: "git+https://github.com/dinosaure/irmin.git#ocaml-git"
+}
