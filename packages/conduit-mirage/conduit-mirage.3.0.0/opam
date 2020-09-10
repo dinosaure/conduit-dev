@@ -26,6 +26,8 @@ depends: [
   "mirage-flow"
   "mirage-time"
   "dns-client"
+  "ke"
+  "bigstringaf"
 ]
 
 url {
