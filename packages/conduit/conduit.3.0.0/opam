@@ -45,6 +45,7 @@ depends: [
   "ocaml" {>= "4.07.0"}
   "dune"
   "domain-name"
+  "ipaddr"
   "stdlib-shims"
   "alcotest" {with-test}
 ]
