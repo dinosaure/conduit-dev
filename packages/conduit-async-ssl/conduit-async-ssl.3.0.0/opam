@@ -30,5 +30,5 @@ depends: [
 ]
 
 url {
-  src: "git+https://github.com/dinosaure/ocaml-conduit.git#3.0.0"
+  src: "git+https://github.com/mirage/ocaml-conduit.git"
 }
