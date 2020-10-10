@@ -17,6 +17,7 @@ depends: [
   "ocaml"      {>= "4.02.3"}
   "dune"       {>= "2.5.1"}
   "irmin"      {>= "2.3.0"}
+  "ppx_irmin"  {= version}
   "git"        {>= "2.2.0"}
   "digestif"   {>= "0.9.0"}
   "astring"
@@ -27,6 +28,7 @@ depends: [
   "irmin-test" {with-test & >= "2.0.0"}
   "irmin-mem"  {with-test & >= "2.0.0"}
   "git-unix"   {with-test & >= "2.2.0"}
+  "git-cohttp-unix"   {with-test & >= "2.2.0"}
   "mtime"      {with-test & >= "1.0.0"}
 ]
 
